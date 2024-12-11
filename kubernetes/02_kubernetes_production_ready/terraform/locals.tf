@@ -37,7 +37,7 @@ locals {
   cloud_init = {
     user           = "ubuntu"
     password       = "ubuntu"
-    ssh_public_key = file("/home/zolli/.ssh/cloud-init.pub")
+    ssh_public_key = file("cloud-init.pub")
   }
 
   # master specific configuration

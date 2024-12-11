@@ -62,7 +62,7 @@ resource "proxmox_vm_qemu" "masters" {
   connection {
     type        = "ssh"
     user        = local.cloud_init.user
-    private_key = file("/home/zolli/.ssh/cloud-init")
+    private_key = file("cloud-init")
     host = cidrhost(
       local.cidr,
       local.masters.network_last_octect + count.index
